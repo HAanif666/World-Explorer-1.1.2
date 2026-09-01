@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>World Explorer Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='admin.css') }}"
+    >
+
+    <script
+        src="{{ url_for('static', filename='admin.js') }}"
+        defer
+    ></script>
+
+</head>
+
+<body>
+
+    <header class="admin-header">
+
+        <h1>🌍 World Explorer Admin</h1>
+
+        <a
+            href="/admin/logout"
+            class="logout"
+        >
+            Logout
+        </a>
+
+    </header>
+
+
+    <main class="admin-container">
+
+        <section class="admin-section">
+
+            <h2>Add a Country</h2>
+
+            <input
+                id="countryName"
+                type="text"
+                placeholder="Country name"
+            >
+
+            <input
+                id="countryCapital"
+                type="text"
+                placeholder="Capital"
+            >
+
+            <input
+                id="countryCurrency"
+                type="text"
+                placeholder="Currency"
+            >
+
+            <button id="addCountry">
+                Add Country
+            </button>
+
+            <div id="countryList"></div>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <h2>⭐ Favourite Counts</h2>
+
+            <div id="favouriteCounts"></div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
