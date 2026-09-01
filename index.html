@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="Images/World explorer favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>World Explorer</title>
+</head>
+
+<body>
+
+    <div id="modeScreen">
+
+    <h1>🌍 World Explorer</h1>
+
+    <h2>Select your mode</h2>
+
+    <div class="mode-options">
+
+        <button class="mode-card" id="flagsMode">
+            <span>🌍🚩</span>
+            <h3>World Explorer: Flags</h3>
+            <p>Explore countries, flags, capitals and currencies.</p>
+        </button>
+
+        <button class="mode-card" id="explorersMode">
+            <span>🧭</span>
+            <h3>World Explorers</h3>
+            <p>Discover famous explorers and their journeys.</p>
+        </button>
+
+    </div>
+
+</div>
+
+    <nav>
+        <h2>🌍 World Explorer</h2>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#countries">Countries</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <button id="themeButton">☀️ Light Mode</button>
+
+    <header class="hero">
+
+        <h1>Discover the World</h1>
+
+        <p>
+            Explore countries, cultures, landmarks and more.
+        </p>
+
+        <a href="#countries" class="btn">
+            Explore Countries
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="countries" id="countries">
+
+            <h2>Explore Countries</h2>
+
+            <div class="search-controls">
+
+                <input
+                    type="text"
+                    id="countrySearch"
+                    placeholder="Search for a country..."
+                >
+
+                <button id="clearSearch">
+                    Clear
+                </button>
+
+            </div>
+
+            <p id="noResults"></p>
+
+            <div class="country-container">
+
+                <!-- NIGERIA -->
+
+                <article class="country-card">
+
+                    <img src="Images/Nigeria.png" alt="Nigeria">
+
+                    <h3>Nigeria 🇳🇬</h3>
+
+                    <p>
+                        Discover Nigeria's culture, cities, food, and landmarks.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('Nigeria')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showNigeria()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="nigeriaDetails"
+                    ></div>
+
+                </article>
+
+
+                <!-- JAPAN -->
+
+                <article class="country-card">
+
+                    <img src="Images/japan.jfif" alt="Japan">
+
+                    <h3>Japan 🇯🇵</h3>
+
+                    <p>
+                        Explore Japan's traditions, cities, technology, and history.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('Japan')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showJapan()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="japanDetails"
+                    ></div>
+
+                </article>
+
+
+                <!-- BRAZIL -->
+
+                <article class="country-card">
+
+                    <img src="Images/brazil.png" alt="Brazil">
+
+                    <h3>Brazil 🇧🇷</h3>
+
+                    <p>
+                        Discover Brazil's culture, nature, cities, and landmarks.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('Brazil')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showBrazil()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="brazilDetails"
+                    ></div>
+
+                </article>
+
+
+                <!-- FRANCE -->
+
+                <article class="country-card">
+
+                    <img src="Images/France.png" alt="France">
+
+                    <h3>France 🇫🇷</h3>
+
+                    <p>
+                        Explore France's culture, cuisine, cities, and landmarks.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('France')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showFrance()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="franceDetails"
+                    ></div>
+
+                </article>
+
+
+                <!-- AUSTRALIA -->
+
+                <article class="country-card">
+
+                    <img
+                        src="Images/Austraillia.png"
+                        alt="Australia"
+                    >
+
+                    <h3>Australia 🇦🇺</h3>
+
+                    <p>
+                        Discover Australia's wildlife, cities, beaches, and landmarks.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('Australia')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showAustralia()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="australiaDetails"
+                    ></div>
+
+                </article>
+
+
+                <!-- UNITED KINGDOM -->
+
+                <article class="country-card">
+
+                    <img
+                        src="Images/UnitedKingdom.png"
+                        alt="United Kingdom"
+                    >
+
+                    <h3>United Kingdom 🇬🇧</h3>
+
+                    <p>
+                        Explore the UK's history, cities, landmarks, and culture.
+                    </p>
+
+                    <button
+                        onclick="favouriteCountry('United Kingdom')"
+                        class="favourite-btn"
+                    >
+                        <span class="star">⭐</span>
+                        <span class="fav-text">Favourite</span>
+                    </button>
+
+                    <button
+                        onclick="showUnitedKingdom()"
+                        class="more-btn"
+                    >
+                        More
+                    </button>
+
+                    <div
+                        class="country-details"
+                        id="unitedKingdomDetails"
+                    ></div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="info-section">
+
+            <h2>About World Explorer</h2>
+
+            <p>
+                World Explorer helps you discover countries,
+                cultures, landmarks and interesting facts.
+            </p>
+
+        </section>
+
+
+        <section id="contact" class="info-section">
+
+            <h2>Contact</h2>
+
+            <p>
+                Thanks for visiting World Explorer!
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 World Explorer</p>
+    </footer>
+
+</body>
+
+</html>
